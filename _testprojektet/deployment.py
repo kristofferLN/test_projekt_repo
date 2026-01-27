@@ -3,11 +3,7 @@ from .settings import *
 from .settings import BASE_DIR
 
 SECRET_KEY = os.environ['SECRET']
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'testprojektet-cdcsh2heetfrehh4.westeurope-01.azurewebsites.net',
-]
+ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']]
