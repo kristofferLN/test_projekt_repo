@@ -34,4 +34,4 @@ DATABASES = {
         'USER': '', 
          } }
 
-#azure giver også disse variabler, via en environmentalvariable. vi laver reference dertil, fordi det er nødvendigt at specificere, men også fordi vi ikke kan specificiere sensitive detaljer her.
+#azure giver også disse variabler, via en environmentalvariable. vi laver referendce dertil, fordi det er nødvendigt at specificere, men også fordi vi ikke kan specificiere sensitive detaljer her.
