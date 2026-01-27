@@ -3,11 +3,16 @@ from .settings import *
 from .settings import BASE_DIR
 
 SECRET_KEY = os.environ['SECRET']
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'testprojektet-cdcsh2heetfrehh4.westeurope-01.azurewebsites.net',
+]
+
 
 CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']]
 
-DEBUG = False 
+DEBUG = True 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
