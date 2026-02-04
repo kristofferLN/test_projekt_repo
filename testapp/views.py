@@ -10,4 +10,4 @@ def home_view(request):
     return HttpResponse("hey home")
 
 def homeAbout_view(request):
-    return HttpResponse("hey homeAbout")
+    return render(request, "homeAbout.html", {"pladsholder_navn": "pladsholder_indhold"})
