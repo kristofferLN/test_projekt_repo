@@ -77,6 +77,7 @@ WSGI_APPLICATION = '_testprojektet.wsgi.application'
 
 
 
+
 DATABASES = {
     "default": dj_database_url.config(
         default=os.environ.get("DATABASE_URL")
@@ -84,12 +85,12 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-  #  'default': {
-   #     'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': BASE_DIR / 'db.sqlite3',
-    #}
-#}
+""" DATABASES = {
+   'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+    }
+} """
  
  # 'NAME': BASE_DIR / 'db.sqlite3',
 # "NAME": "/home/site/wwwroot/db.sqlite3" med denne kode, og lidt SSH 04.02 kl 20.30 copilot, bruge den en tom database i produktion som så kunne populates med .create. men tilgæld vil mit projekt ikke gemme, så måtte skifte tilbage.
