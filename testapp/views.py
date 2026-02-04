@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def base_url_view(request):
-    return HttpResponse("hey base_url")
+    return HttpResponse("hey base_urlen")
 
 def home_view(request):
     return HttpResponse("hey home")

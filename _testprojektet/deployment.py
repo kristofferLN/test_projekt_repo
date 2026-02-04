@@ -29,9 +29,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DATABASES = { 
     'default': { 
         'ENGINE': 'django.db.backends.postgresql', 
-        'NAME': 'testprojekt-server', 
-        'HOST': '', 
-        'USER': '', 
+        'NAME': 'testprojekt-server' 
          } }
 
 #azure giver også disse variabler, via en environmentalvariable. vi laver referendce dertil, fordi det er nødvendigt at specificere, men også fordi vi ikke kan specificiere sensitive detaljer her.
