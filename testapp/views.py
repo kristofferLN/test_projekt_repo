@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Bruger
 
 
 # Create your views here.
@@ -10,4 +11,6 @@ def home_view(request):
     return HttpResponse("hey home")
 
 def homeAbout_view(request):
-    return render(request, "homeAbout.html", {"pladsholder_navn": "pladsholder_indhold"})
+    database_data = Bruger.objects.all()
+    print(database_data)
+    return render(request, "homeAbout.html", {"database": database_data})
