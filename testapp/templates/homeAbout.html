@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
     <h1>hey from home about from html template</h1>
-    {{database}}
+    {% for data in database %}
+        {{data.brugernavn}}
+    {% endfor %}
+
+    {% endblock %}
 </body>
 </html>
