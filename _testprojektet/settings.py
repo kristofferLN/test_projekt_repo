@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -73,13 +75,24 @@ WSGI_APPLICATION = '_testprojektet.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        "NAME": "/home/site/wwwroot/db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 }
-# 'NAME': BASE_DIR / 'db.sqlite3',
+
+
+# DATABASES = {
+  #  'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
+ 
+ # 'NAME': BASE_DIR / 'db.sqlite3',
+# "NAME": "/home/site/wwwroot/db.sqlite3" med denne kode, og lidt SSH 04.02 kl 20.30 copilot, bruge den en tom database i produktion som så kunne populates med .create. men tilgæld vil mit projekt ikke gemme, så måtte skifte tilbage.
 
 
 # Password validation
